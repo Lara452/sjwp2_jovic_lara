@@ -1,0 +1,250 @@
+
+
+body {
+    background-color: #C2F8F6;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0 30px;
+}
+
+
+nav {
+    background-color: #007b83;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 2.3em;
+    font-weight: bold;
+    color: #222;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #222;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+
+p {
+    color: rgb(86, 86, 86);
+    margin: 7px;
+    text-align: justify;
+}
+
+ul {
+    margin-left: 25px;
+}
+
+th, td {
+    font-size: 15px;
+}
+
+
+.okvir {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+
+.usporedba {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.usporedba h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #d0f0ef;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #888;
+}
+
+td {
+    padding: 8px 10px;
+    border: 1px solid #888;
+    vertical-align: top;
+    text-align: left;
+    color: rgb(60, 60, 60);
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+img {
+    display: block;
+    margin: 25px auto;
+    width: 480px;
+    height: 220px;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+
+.card {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.frame {
+    width: 420px;
+    height: 420px;
+    margin: 0 auto;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    background: white;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.card {
+  margin-bottom: 40px;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.frame {
+  width: 420px;
+  height: 420px;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+svg, canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.kontakt {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 500px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.kontakt h2 {
+    margin-bottom: 20px;
+    color: #007b83;
+}
+
+.kontakt form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kontakt label {
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+.kontakt input,
+.kontakt textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 15px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+
+.kontakt input:focus,
+.kontakt textarea:focus {
+    outline: none;
+    border-color: #007b83;
+    box-shadow: 0 0 5px rgba(0, 123, 131, 0.4);
+}
+
+.kontakt button {
+    background-color: #007b83;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.kontakt button:hover {
+    background-color: #005f65;
+}

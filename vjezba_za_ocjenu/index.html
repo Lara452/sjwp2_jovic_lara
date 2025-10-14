@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skriptni jezici</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <nav>
+        <ul>
+            <li><a href="#">Početna</a></li>
+            <li><a href="#">O nama</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <h1>HTML, CSS, Canvas i SVG</h1>
+
+    <div class="okvir">
+        <p><b>Canvas</b> je HTML5 element koji, pomoću JavaScript-a, omogućava dinamičko iscrtavanje različitih oblika, dodavanje slika i kreiranje animacija na web stranici.</p>
+
+        <p>Na platnu (canvas-u) to ne radimo korištenjem novog jezika (kao što je to slučaj kod SVG) ili korištenjem Flasha. Najčešće uporabe platna su:</p>
+        <ul>
+            <li>crtanje grafova</li>
+            <li>animacije i igre</li>
+            <li>kompozicija slike</li>
+        </ul>
+    </div>
+
+    <div class="okvir">
+        <p><b>SVG (Scalable Vector Graphics)</b> grafika ne gubi kvalitetu prilikom zumiranja ili promjene veličine.</p>
+
+        <p>Svi crteži mogu biti interaktivni i dinamički. Svaki element i atribut SVG datoteke može biti animiran, definirano i pokrenuto interaktivno ili pomoću skripti.</p>
+
+        <p>SVG integrira druge W3C standarde kao što su DOM, XSL itd.</p>
+    </div>
+
+    <div class="usporedba">
+        <h3>Usporedba SVG-a i Canvasa</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>SVG</th>
+                    <th>HTML Canvas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SVG ima bolju skalabilnost i zadržava kvalitetu slike pri svakoj rezoluciji.</td>
+                    <td>Canvas ima lošiju skalabilnost i nije prikladan za vrlo visoke rezolucije.</td>
+                </tr>
+                <tr>
+                    <td>SVG daje bolje performanse pri manjem broju objekata i većoj površini.</td>
+                    <td>Canvas daje bolje performanse pri većem broju objekata i manjim površinama.</td>
+                </tr>
+                <tr>
+                    <td>SVG se može uređivati pomoću CSS-a i skripti.</td>
+                    <td>Canvas se može uređivati isključivo pomoću skripte.</td>
+                </tr>
+                <tr>
+                    <td>SVG je baziran na vektorima i sastavljen od oblika.</td>
+                    <td>Canvas je baziran na pikselima.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <img src="sjwp.png" alt="Primjer slike vektora i rastera">
+
+    <h2>Primjer SVG-a i Canvasa</h2>
+
+    <!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Slika jedrilice — SVG i Canvas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Primjer crteža: SVG i Canvas</h1>
+
+
+  <section class="card">
+    <h2 class="title">SVG verzija</h2>
+    <div class="frame">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <rect x="6" y="6" width="388" height="388" fill="none" stroke="#000" stroke-width="6"/>
+        <rect x="10" y="10" width="380" height="220" fill="#bfe9f4"/>
+        <circle cx="320" cy="70" r="36" fill="#ffef00" stroke="#f3d600" stroke-width="0.5"/>
+        <defs>
+          <linearGradient id="waterGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#0b2fd9"/>
+            <stop offset="1" stop-color="#4ea3ff"/>
+          </linearGradient>
+        </defs>
+        <rect x="10" y="220" width="380" height="170" fill="url(#waterGrad)" />
+        <rect x="10" y="220" width="380" height="6" fill="#1f5edb" opacity="0.8"/>
+        <rect x="120" y="250" width="160" height="36" rx="4" fill="#b23a2a" stroke="#6f1b12" stroke-width="2"/>
+        <rect x="196" y="170" width="8" height="120" fill="#1f0f0f" stroke="#2b1a1a" stroke-width="1"/>
+        <polygon points="200,174 160,250 200,250" fill="#fff" stroke="#e6e6e6" stroke-width="1"/>
+        <polygon points="200,174 240,250 200,250" fill="#fff" stroke="#e6e6e6" stroke-width="1"/>
+        <polygon points="204,168 224,178 204,178" fill="#1fa64a" stroke="#167e33" stroke-width="1"/>
+        <ellipse cx="200" cy="292" rx="88" ry="10" fill="rgba(0,0,0,0.15)"/>
+      </svg>
+    </div>
+  </section>
+
+
+  
+
+
+<section class="kontakt">
+        <h2>Kontaktirajte nas</h2>
+        <form action="#" method="post">
+            <label for="ime">Ime i prezime:</label>
+            <input type="text" id="ime" name="ime" placeholder="" required>
+
+            <label for="email">Email adresa:</label>
+            <input type="email" id="email" name="email" placeholder="" required>
+
+            <label for="poruka">Poruka:</label>
+            <textarea id="poruka" name="poruka" rows="5" placeholder="" required></textarea>
+
+            <button type="submit">Pošalji poruku</button>
+        </form>
+    </section>
+
+    <script>
+       
+        const c = document.getElementById("myCanvas");
+        const ctx = c.getContext("2d");
+
+        ctx.fillStyle = "lightblue";
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(100, 100, 60, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = "black";
+        ctx.font = "18px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText("Canvas", 100, 110);
+    </script>
+
+</body>
+</html>

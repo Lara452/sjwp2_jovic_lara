@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pogodi broj</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pogodi broj (1-100)</h1>
+    <form id="gameForm" onsubmit =checkNumber()></form>
+    <label for="guess">Unesi broj: </label>
+    <input id="guess" type="number" max="100"min="1"required>
+    <butto type="submit">Pogodi</button>
+        <button type="button">Nova igra</button>
+    <button type="button">Nova igra</button>
+
+    <div id="msg"></div>
+    <div id="attempts"></div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

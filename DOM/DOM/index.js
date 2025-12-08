@@ -1,2 +1,6 @@
 document.query
 alert("radi");
+
+
+
+

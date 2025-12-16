@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Elektrotehnički kalkulator</title>
+</head>
+<body>
+
+<h1>Elektrotehnički kalkulator</h1>
+
+<h2>Ohmov zakon</h2>
+<p>I = U / R</p>
+<label>Otpor R (Ω):</label><br>
+<input id="ohmR" type="number" step="any"><br>
+<label>Napon U (V):</label><br>
+<input id="ohmU" type="number" step="any"><br><br>
+<button onclick="ohmLaw()">Izračunaj struju</button>
+<p id="ohmResult"></p>
+
+<hr>
+
+<h2>Djelitelj napona</h2>
+<p>Uizl = Uin · R2 / (R1 + R2)</p>
+<label>R1 (Ω):</label><br>
+<input id="r1" type="number" step="any"><br>
+<label>R2 (Ω):</label><br>
+<input id="r2" type="number" step="any"><br>
+<label>Ulazni napon Uin (V):</label><br>
+<input id="uin" type="number" step="any"><br><br>
+<button onclick="voltageDivider()">Izračunaj Uizl</button>
+<p id="dividerResult"></p>
+
+<hr>
+
+<h2>Induktivni otpor</h2>
+<p>XL = 2πfL</p>
+<label>Frekvencija f (Hz):</label><br>
+<input id="freq" type="number" step="any"><br>
+<label>Induktivitet L (H):</label><br>
+<input id="ind" type="number" step="any"><br><br>
+<button onclick="inductiveReactance()">Izračunaj XL</button>
+<p id="indResult"></p>
+
+<hr>
+
+<h2>Kapacitivni otpor</h2>
+<p>XC = 1 / (2πfC)</p>
+<label>Frekvencija f (Hz):</label><br>
+<input id="freqC" type="number" step="any"><br>
+<label>Kapacitet C (F):</label><br>
+<input id="cap" type="number" step="any"><br><br>
+<button onclick="capacitiveReactance()">Izračunaj XC</button>
+<p id="capResult"></p>
+
+<script>
+function ohmLaw() {
+  const R = parseFloat(document.getElementById('ohmR').value);
+  const U = parseFloat(document.getElementById('ohmU').value);
+  if (R > 0) {
+    document.getElementById('ohmResult').innerText = 'I = ' + (U / R) + ' A';
+  }
+}
+
+function voltageDivider() {
+  const R1 = parseFloat(document.getElementById('r1').value);
+  const R2 = parseFloat(document.getElementById('r2').value);
+  const Uin = parseFloat(document.getElementById('uin').value);
+  if (R1 + R2 > 0) {
+    document.getElementById('dividerResult').innerText = 'Uizl = ' + (Uin * R2 / (R1 + R2)) + ' V';
+  }
+}
+
+function inductiveReactance() {
+  const f = parseFloat(document.getElementById('freq').value);
+  const L = parseFloat(document.getElementById('ind').value);
+  document.getElementById('indResult').innerText = 'XL = ' + (2 * Math.PI * f * L) + ' Ω';
+}
+
+function capacitiveReactance() {
+  const f = parseFloat(document.getElementById('freqC').value);
+  const C = parseFloat(document.getElementById('cap').value);
+  document.getElementById('capResult').innerText = 'XC = ' + (1 / (2 * Math.PI * f * C)) + ' Ω';
+}
+</script>
+
+</body>
+</html>

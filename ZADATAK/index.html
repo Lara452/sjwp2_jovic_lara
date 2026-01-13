@@ -79,6 +79,8 @@ function inductiveReactance() {
 function capacitiveReactance() {
   const f = parseFloat(document.getElementById('freqC').value);
   const C = parseFloat(document.getElementById('cap').value);
+
+  
   document.getElementById('capResult').innerText = 'XC = ' + (1 / (2 * Math.PI * f * C)) + ' Ω';
 }
 </script>

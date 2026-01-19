@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Conversion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6d6fd3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #5b5fc7;
+            padding: 30px;
+            border-radius: 12px;
+            width: 360px;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        .inputs {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+
+        .field {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .field input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Temperature Conversion</h1>
+
+    <div class="inputs">
+        <div class="field">
+            <label>Celsius</label>
+            <input type="number" id="celsius" oninput="fromCelsius()">
+        </div>
+
+        <div class="field">
+            <label>Fahrenheit</label>
+            <input type="number" id="fahrenheit" oninput="fromFahrenheit()">
+        </div>
+
+        <div class="field">
+            <label>Kelvin</label>
+            <input type="number" id="kelvin" oninput="fromKelvin()">
+        </div>
+    </div>
+</div>
+
+<script src="java.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weight Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6fa8dc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #444;
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 8px 20px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .box {
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            color: white;
+            text-align: left;
+        }
+
+        .pounds { background-color: #3c78d8; }
+        .ounces { background-color: #6aa84f; }
+        .grams { background-color: #e06666; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Weight Converter</h1>
+
+    <input type="number" id="kgInput" placeholder="Unesi kilograme">
+    <button onclick="convert()">Go</button>
+
+    <div class="box pounds">
+        <h3>Pounds:</h3>
+        <p id="pounds">0</p>
+    </div>
+
+    <div class="box ounces">
+        <h3>Ounces:</h3>
+        <p id="ounces">0</p>
+    </div>
+
+    <div class="box grams">
+        <h3>Grams:</h3>
+        <p id="grams">0</p>
+    </div>
+</div>
+
+<script src="java.js"></script>
+</body>
+</html>

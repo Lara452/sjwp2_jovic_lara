@@ -5,15 +5,15 @@ function igraj(igrac) {
     let ishod = "";
 
     if (igrac === racunalo) {
-        ishod = "Neriješeno 🤝";
+        ishod = "Neriješeno ";
     } else if (
         (igrac === "kamen" && racunalo === "škare") ||
         (igrac === "škare" && racunalo === "papir") ||
         (igrac === "papir" && racunalo === "kamen")
     ) {
-        ishod = "Pobijedio si! 🎉";
+        ishod = "Pobijedio si! ";
     } else {
-        ishod = "Izgubio si 😢";
+        ishod = "Izgubio si ";
     }
 
     document.getElementById("rezultat").innerHTML =

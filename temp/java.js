@@ -18,3 +18,4 @@ function fromKelvin() {
     document.getElementById("celsius").value = (k - 273.15).toFixed(2);
     document.getElementById("fahrenheit").value = ((k - 273.15) * 9/5 + 32).toFixed(2);
 }
+
